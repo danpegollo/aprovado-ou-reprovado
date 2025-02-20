@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Notas</title>
+  </head>
+  <body>
+    <h1>Veja se você passou de ano</h1>
+    <div>
+      <label>Coloque sua nota de física</label>
+      <input id="nota_1" type="number" />
+    </div>
+
+    <div>
+      <label>Coloque sua nota de português</label>
+      <input id="nota_2" type="number" />
+    </div>
+
+    <div>
+      <label>Coloque sua nota de matemática</label>
+      <input id="nota_3" type="number" />
+    </div>
+
+    <div>
+      <label>Coloque sua nota de química</label>
+      <input id="nota_4" type="number" />
+    </div>
+
+    <button onclick="calcularMedia()" id="botao_calcular">Calcular</button>
+    <button onclick="reiniciar()" id="botão_reiniciar">Limpar campos</button>
+
+    <p id="resposta"></p>
+    <script src="app.js" defer></script>
+  </body>
+</html>
