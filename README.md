@@ -1,7 +1,7 @@
-<h1>Verificador de Número</h1>
+<h1>Calculador de média</h1>
 
 <h2>📝Sobre</h2>
-<p>Projeto de verificador de número, com o objetivo de verificar se o número analisado é par ou ímpar.</p>
+<p>Calculadora de média, com base em 4 notas colocadas pelo usuário</p>
 
 <h2>🚀Tecnologias</h2>
 <ul style="list-style-type: square;">
