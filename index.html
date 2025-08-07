@@ -10,22 +10,22 @@
     <h1>Veja se você passou de ano</h1>
     <div>
       <label>Coloque sua nota de física</label>
-      <input id="nota_1" type="number" />
+      <input id="nota_1" type="number" min="0" max="10"/>
     </div>
 
     <div>
       <label>Coloque sua nota de português</label>
-      <input id="nota_2" type="number" />
+      <input id="nota_2" type="number" min="0" max="10"/>
     </div>
 
     <div>
       <label>Coloque sua nota de matemática</label>
-      <input id="nota_3" type="number" />
+      <input id="nota_3" type="number" min="0" max="10" />
     </div>
 
     <div>
       <label>Coloque sua nota de química</label>
-      <input id="nota_4" type="number" />
+      <input id="nota_4" type="number" min="0" max="10"/>
     </div>
 
     <button onclick="calcularMedia()" id="botao_calcular">Calcular</button>

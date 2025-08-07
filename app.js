@@ -7,21 +7,24 @@ function pegarInput() {
 }
 function calcularMedia() {
   const notas = pegarInput();
-  const media = (notas[0] + notas[1] + notas[2] + notas[3]) / notas.length;
-
-  if (media >= 6) {
-    document.querySelector(
-      "#resposta"
-    ).innerHTML = `Parabéns!!! Sua média é ${media.toFixed(
-      2
-    )}, logo você foi aprovado`;
-  } else {
-    document.querySelector(
-      "#resposta"
-    ).innerHTML = `Que pena, sua média é ${media.toFixed(
-      2
-    )}, logo você foi reprovado`;
+  const notaInvalida = notas.some(
+    (nota) => isNaN(nota) || nota < 0 || nota > 10
+  );
+  if (notaInvalida) {
+    document.querySelector("#resposta").innerHTML =
+      "Por favor, insira apenas notas entre 0 e 10.";
   }
+  (() => {
+    const media = (notas[0] + notas[1] + notas[2] + notas[3]) / notas.length;
+
+    media >= 6
+      ? (document.querySelector(
+          "#resposta"
+        ).innerHTML = `Parabéns!!! Sua média é ${media}, logo você foi aprovado`)
+      : (document.querySelector(
+          "#resposta"
+        ).innerHTML = `Que pena, sua média é ${media}, logo você foi reprovado`);
+  })();
 }
 function reiniciar() {
   document.querySelector(`#nota_1`).value = "";
